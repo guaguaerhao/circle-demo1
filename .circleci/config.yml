@@ -2,7 +2,7 @@ version: 2
 jobs:
   one:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:12
     step:
       - checkout
       - run: echo "a first hello"
