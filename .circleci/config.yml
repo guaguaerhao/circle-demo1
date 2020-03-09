@@ -10,11 +10,7 @@ jobs:
       - run: 
           name: "Hello World"
           command: echo "Hello World!"
-      - run:
-          name: "yarn install"    
-          command: yarn install
-      - run:
-          name: "yarn build"
-          command: yarn build
+      - run: yarn install
+      - run: yarn build
 
 
