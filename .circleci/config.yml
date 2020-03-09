@@ -7,9 +7,8 @@ jobs:
         only:
           - master  
     steps:
-      - run: 
-          name: "Hello World"
-          command: echo "Hello World!"
+      - checkout
+      - run: echo "Hello World!"
       - run: yarn install
       - run: yarn build
 
