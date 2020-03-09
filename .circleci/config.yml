@@ -1,24 +1,22 @@
 version: 2
 jobs:
   one:
-    build:
-      docker:
-        - image: circleci/node:8
-      step:
-        - checkout
-        - run: echo "a first hello"
-        - run: sleep 25
+    docker:
+      - image: circleci/node:8
+    step:
+      - checkout
+      - run: echo "a first hello"
+      - run: sleep 25
   two:
-    build:
-      docker:
-        - image: circleci/node:12
-      branches:
-          only:
-            - master  
-      steps:
-        - checkout
-        - run: echo "Hello World!"
-        - run: yarn install
-        - run: yarn build
+    docker:
+      - image: circleci/node:12
+    branches:
+        only:
+          - master  
+    steps:
+      - checkout
+      - run: echo "Hello World!"
+      - run: yarn install
+      - run: yarn build
 
 
