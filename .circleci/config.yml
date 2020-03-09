@@ -1,13 +1,6 @@
 version: 2
 jobs:
-  one:
-    docker:
-      - image: circleci/node:12
-    step:
-      - checkout
-      - run: echo "a first hello"
-      - run: sleep 25
-  two:
+  build:
     docker:
       - image: circleci/node:12
     branches:
@@ -18,10 +11,3 @@ jobs:
       - run: echo "Hello World!"
       - run: yarn install
       - run: yarn build
-
-workflows:
-  version: 2
-  one_and_two:
-    jobs:
-      - one
-      - two
