@@ -8,10 +8,10 @@ jobs:
           name: "Hello World"
           command: echo "Hello World!"
       - run:
-          name: "npm install"    
+          name: "yarn install"    
           command: yarn install
       - run:
-          name: "npm run build"
+          name: "yarn build"
           command: yarn build
 
 
